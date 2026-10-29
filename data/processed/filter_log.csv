@@ -1,0 +1,24 @@
+target,step,n_records,n_molecules,note
+cox1,01_raw_download,9458,5645,as downloaded from ChEMBL
+cox1,02_target_id,9458,5645,target_chembl_id == CHEMBL221
+cox1,03_human_target,9458,5645,target_organism == Homo sapiens
+cox1,04_endpoint_type,4488,3792,standard_type == IC50
+cox1,05_exact_relation,2364,1840,"standard_relation == '='; all relations seen: {'=': 2364, '>': 1159, nan: 939, '<': 24, '~': 1, '<=': 1}"
+cox1,06_units,2346,1823,standard_units == nM
+cox1,07_positive_value,2346,1823,standard_value present and > 0
+cox1,08_no_validity_flag,2142,1659,"dropped ChEMBL-flagged records: {'Outside typical range': 202, 'Potential transcription error': 2}"
+cox1,09_assay_type,2029,1562,"kept assay_type in ('B', 'F'); all types seen: {'B': 1968, 'A': 113, 'F': 61}"
+cox1,10_has_smiles,2029,1562,canonical_smiles present
+cox1,11_one_value_per_molecule,2029,1562,"collapsed to 1,562 molecules by median pIC50; 41 flagged with pIC50 range > 1.0 log units"
+cox2,01_raw_download,15314,9137,as downloaded from ChEMBL
+cox2,02_target_id,15314,9137,target_chembl_id == CHEMBL230
+cox2,03_human_target,15314,9137,target_organism == Homo sapiens
+cox2,04_endpoint_type,8504,6442,standard_type == IC50
+cox2,05_exact_relation,6414,4556,"standard_relation == '='; all relations seen: {'=': 6414, '>': 1018, nan: 1014, '<': 56, '>=': 1, '<=': 1}"
+cox2,06_units,6393,4536,standard_units == nM
+cox2,07_positive_value,6386,4529,standard_value present and > 0
+cox2,08_no_validity_flag,6116,4393,"dropped ChEMBL-flagged records: {'Outside typical range': 261, 'Potential transcription error': 9}"
+cox2,09_assay_type,6100,4380,"kept assay_type in ('B', 'F'); all types seen: {'B': 6027, 'F': 73, 'A': 16}"
+cox2,10_has_smiles,6099,4379,canonical_smiles present
+cox2,11_one_value_per_molecule,6099,4379,"collapsed to 4,379 molecules by median pIC50; 172 flagged with pIC50 range > 1.0 log units"
+paired,12_molecules_measured_against_both,1280,1280,"1,275 pairs share at least one source publication; 117 pairs involve a high-spread molecule; 14 pairs share a parent compound with another paired row (salt/child forms); 0 pairs with inconsistent SMILES"

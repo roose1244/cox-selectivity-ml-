@@ -14,8 +14,14 @@ env/
 # macOS
 .DS_Store
 
-# Raw data
+# Raw data: large and regenerable from the ChEMBL API, but keep the provenance
+# record and the target metadata so a download can be reproduced and audited.
 data/raw/*
+!data/raw/provenance.json
+!data/raw/chembl_target_*.json
+
+# Notebook backups
+*.ipynb.bak
 
 # Model files
 models/*

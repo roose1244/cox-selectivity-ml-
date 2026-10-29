@@ -1,0 +1,39 @@
+{
+  "curated_at_utc": "2026-10-29T15:09:31+00:00",
+  "curator": "src/curate.py",
+  "chembl_db_version": "ChEMBL_37",
+  "chembl_release_date": "2026-05-01",
+  "raw_retrieved_at_utc": "2026-10-29T15:07:32+00:00",
+  "endpoint": {
+    "standard_type": "IC50",
+    "standard_units": "nM",
+    "standard_relation": "=",
+    "censored_relations": "excluded from this analysis; counts recorded in filter_log.csv",
+    "rationale": "IC50 and Ki are different quantities and are not pooled. IC50 in nM with an exact '=' relation is the best-populated comparable endpoint for both COX isoforms in this ChEMBL release, and matches the existing exploratory notebook."
+  },
+  "potency_transform": "pIC50 = 9 - log10(IC50_nM)",
+  "selectivity_definition": "selectivity_log10_IC50_cox1_over_cox2 = log10(IC50_COX1 / IC50_COX2) = pIC50_COX2 - pIC50_COX1; positive means stronger COX-2 inhibition",
+  "duplicate_policy": "median pIC50 per molecule-target pair; spread retained and flagged when the replicate range exceeds 1.0 log units",
+  "assay_types_kept": [
+    "B",
+    "F"
+  ],
+  "counts": {
+    "cox1_curated_records": 2029,
+    "cox1_molecules": 1562,
+    "cox2_curated_records": 6099,
+    "cox2_molecules": 4379,
+    "paired_molecules": 1280,
+    "paired_same_publication": 1275,
+    "paired_either_high_spread": 117,
+    "paired_sharing_parent_with_another_row": 14
+  },
+  "outputs": [
+    "cox1_ic50_records.csv",
+    "cox1_molecule_summary.csv",
+    "cox2_ic50_records.csv",
+    "cox2_molecule_summary.csv",
+    "cox_paired_selectivity.csv",
+    "filter_log.csv"
+  ]
+}
